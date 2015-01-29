@@ -1,0 +1,32 @@
+<div class="page-header">
+  <%= link_to rubyqs_path, :class => 'btn btn-default' do %>
+    <span class="glyphicon glyphicon-list-alt"></span>
+    Back
+  <% end %>
+  <%= link_to edit_rubyq_path(@rubyq), :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-pencil"></span>
+    Edit
+  <% end %>
+  <h1>Show rubyq</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Prompt:</dt>
+  <dd><%= @rubyq.prompt_id %></dd>
+
+  <dt>Group:</dt>
+  <dd><%= @rubyq.group_id %></dd>
+
+  <dt>Prompt1:</dt>
+  <dd><%= @rubyq.prompt1 %></dd>
+
+  <dt>Prompt2:</dt>
+  <dd><%= @rubyq.prompt2 %></dd>
+
+  <dt>Answer:</dt>
+  <dd><%= @rubyq.answer %></dd>
+
+  <dt>Linear:</dt>
+  <dd><%= @rubyq.linear %></dd>
+
+</dl>

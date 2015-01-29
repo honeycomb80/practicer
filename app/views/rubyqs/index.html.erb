@@ -1,0 +1,39 @@
+<div class="page-header">
+  <%= link_to new_rubyq_path, :class => 'btn btn-primary' do %>
+    <span class="glyphicon glyphicon-plus"></span>
+    New Rubyq
+  <% end %>
+  <h1>Listing rubyqs</h1>
+</div>
+
+<div class="table-responsive">
+  <table class="table table-striped table-bordered table-hover">
+    <thead>
+      <tr>
+            <th>Prompt</th>
+            <th>Group</th>
+            <th>Prompt1</th>
+            <th>Prompt2</th>
+            <th>Answer</th>
+            <th>Linear</th>
+            <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @rubyqs) do |rubyq| %>
+            <td><%= rubyq.prompt_id %></td>
+            <td><%= rubyq.group_id %></td>
+            <td><%= rubyq.prompt1 %></td>
+            <td><%= rubyq.prompt2 %></td>
+            <td><%= rubyq.answer %></td>
+            <td><%= rubyq.linear %></td>
+            <td><%= link_to 'Show', rubyq %></td>
+        <td><%= link_to 'Edit', edit_rubyq_path(rubyq) %></td>
+        <td><%= link_to 'Destroy', rubyq, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      <% end %>
+    </tbody>
+  </table>
+</div>
